@@ -1,7 +1,7 @@
 "use strict";
 let data = require("../Orchids/testData/data.js");
 let LogInOut = require("./pageObjects/logInOut.js");
-let productManipulation = require("../Orchids/pageObjects/productManipulation.js");
+let libraryActions = require("../Orchids/pageObjects/libraryActions.js");
 const logInOut = require("./pageObjects/logInOut.js");
 
 describe("Test Orchids ", function () {
@@ -9,9 +9,9 @@ describe("Test Orchids ", function () {
     cy.visit("https://gcloud-web.embodee.com/authentication/sign-in");
   });
 
-  afterEach(() => {
-    cy.wait(3000)
-  });
+  // afterEach(() => {
+  //   cy.wait(3000)
+  // });
 
   after(() => {
     logInOut.logOut();
@@ -21,16 +21,27 @@ describe("Test Orchids ", function () {
     LogInOut.positiveLogin(data.login);
   });
 
-  it("Shall create new products", function () {
-    productManipulation.createNew(data.newProducts[0]);
+  it("Shall Open the library", function () {
+    libraryActions.openLibrary();
   });
 
-  it("Shall find the created products", function () {
-    productManipulation.productSearch(data.newProducts[0].prCode);
+  it("Shall go to Colors", function () {
+    libraryActions.libraryNavigation("Colors")
   });
 
-  it("Shall delete the created ptoduct", function () {
-    productManipulation.deleteSelectedProduct();
+  it("Shall go to Materials", function () {
+    libraryActions.libraryNavigation("Materials")
   });
+
+  it("Shall go to Prints", function () {
+    libraryActions.libraryNavigation('Prints')
+  });
+
+  it("Shall go to Graphics", function () {
+    libraryActions.libraryNavigation('Graphics')
+  });
+  // it("Shall delete the created ptoduct", function () {
+  //   productManipulation.deleteSelectedProduct();
+  // });
 
 });

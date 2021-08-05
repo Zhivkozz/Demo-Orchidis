@@ -9,9 +9,9 @@ describe("Test Orchids ", function () {
     cy.visit("https://gcloud-web.embodee.com/authentication/sign-in");
   });
 
-  afterEach(() => {
-    cy.wait(3000)
-  });
+  // afterEach(() => {
+  //   cy.wait(3000)
+  // });
 
   after(() => {
     logInOut.logOut();

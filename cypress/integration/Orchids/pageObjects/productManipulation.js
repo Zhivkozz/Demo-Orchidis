@@ -35,7 +35,7 @@ let productManipulation = function () {
 
       cy.wait(2500);
     actions.clickButton(elAddBTN);
-    
+      cy.wait(2500);
     actions.clickButton(elLogo) // to exit from the created product
 
   };
