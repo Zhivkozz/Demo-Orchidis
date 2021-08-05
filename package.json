@@ -1,0 +1,25 @@
+{
+  "name": "n",
+  "version": "1.0.0",
+  "description": "To run the demo\r  1-\r  npm i --save-dev      \r  2-\r  ./node_modules/.bin/cypress open",
+  "main": "actions.js",
+  "dependencies": {
+    "cypress": "^8.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy": "cypress open",
+    "cy:run:firefox": "cypress run --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhivkozz/Demo-Orchidis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zhivkozz/Demo-Orchidis/issues"
+  },
+  "homepage": "https://github.com/Zhivkozz/Demo-Orchidis#readme"
+}
